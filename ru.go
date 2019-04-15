@@ -1,13 +1,7 @@
 // Package num2word holds Number to words converter
 package num2word
 
-import (
-	"fmt"
-	"strings"
-	"unicode"
-)
-
-var repl = [][]string{
+var ruRepl = [][]string{
 	// t - тысячи; m - милионы; M - миллиарды;
 	{",,,,,,", "eM"},
 	{",,,,,", "em"},
@@ -91,29 +85,7 @@ var repl = [][]string{
 	{"M", "миллиардов "},
 }
 
-var mask = []string{",,,", ",,", ",", ",,,,", ",,", ",", ",,,,,", ",,", ",", ",,,,,,", ",,", ","}
+func RuNum2word(number float64, upperFirstChar bool) string {
 
-// RuMoney - деньги прописью на русском
-func RuMoney(number float64, upperFirstChar bool) string {
-
-	s := fmt.Sprintf("%.2f", number)
-	l := len(s)
-
-	dest := s[l-3:l] + "k"
-	s = s[:l-3]
-	l = len(s)
-	for i := l; i > 0; i-- {
-		c := string(s[i-1])
-		dest = c + mask[l-i] + dest
-	}
-
-	for _, r := range repl {
-		dest = strings.Replace(dest, r[0], r[1], -1)
-	}
-	if upperFirstChar {
-		a := []rune(dest)
-		a[0] = unicode.ToUpper(a[0])
-		dest = string(a)
-	}
-	return dest
+	return Num2word(number, upperFirstChar, ruRepl)
 }
