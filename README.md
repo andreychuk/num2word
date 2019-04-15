@@ -30,12 +30,12 @@ Usage
 
 ```
 import (
-  "github.com/LeKovr/num2word"
+  "github.com/andreychuk/num2word"
 )
 
 ...
 
-text := num2word.RusAmount(total, true)
+text := num2word.UaNum2word(total, true)
 ```
 
 License
