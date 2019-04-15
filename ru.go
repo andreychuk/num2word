@@ -85,7 +85,7 @@ var ruRepl = [][]string{
 	{"M", "миллиардов "},
 }
 
-func RuNum2word(number float64, upperFirstChar bool) string {
+func RuAmount(number float64, upperFirstChar bool) string {
 
 	return Num2word(number, upperFirstChar, ruRepl)
 }

@@ -11,9 +11,9 @@ var samples = []struct {
 	{100.21, false, "сто рублей 21 копейка"},
 }
 
-func Test_RuNum2word(t *testing.T) {
+func Test_RuAmount(t *testing.T) {
 	for _, tt := range samples {
-		res := RuNum2word(tt.amount, tt.upper)
+		res := RuAmount(tt.amount, tt.upper)
 		if res != tt.expected {
 			t.Errorf("RuMoney(%.2f): expected '%s', got '%s'", tt.amount, tt.expected, res)
 		}

@@ -85,7 +85,7 @@ var uaRepl = [][]string{
 }
 
 // UaMoney - гроші прописом українською
-func UaNum2word(number float64, upperFirstChar bool) string {
+func UaAmount(number float64, upperFirstChar bool) string {
 
 	return Num2word(number, upperFirstChar, uaRepl)
 }

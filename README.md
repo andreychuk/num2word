@@ -35,7 +35,7 @@ import (
 
 ...
 
-text := num2word.UaNum2word(total, true)
+text := num2word.UaAmount(total, true)
 ```
 
 License
