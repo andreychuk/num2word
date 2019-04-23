@@ -85,6 +85,7 @@ var ruRepl = [][]string{
 	{"M", "миллиардов "},
 }
 
+// RuAmount - гроші прописом російською
 func RuAmount(number float64, upperFirstChar bool) string {
 
 	return Num2word(number, upperFirstChar, ruRepl)

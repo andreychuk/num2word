@@ -8,6 +8,7 @@ import (
 
 var mask = []string{",,,", ",,", ",", ",,,,", ",,", ",", ",,,,,", ",,", ",", ",,,,,,", ",,", ","}
 
+// Num2word - гроші прописом
 func Num2word(number float64, upperFirstChar bool, repl [][]string) string {
 
 	s := fmt.Sprintf("%.2f", number)
