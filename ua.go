@@ -84,7 +84,7 @@ var uaRepl = [][]string{
 	{"M", "мільярдів "},
 }
 
-// UaMoney - гроші прописом українською
+// UaAmount - гроші прописом українською
 func UaAmount(number float64, upperFirstChar bool) string {
 
 	return Num2word(number, upperFirstChar, uaRepl)
